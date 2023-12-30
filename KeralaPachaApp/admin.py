@@ -12,6 +12,7 @@ admin.site.register(Labour_Salary)
 admin.site.register(Vehicle_Details)
 admin.site.register(Vehicle_Cost)
 admin.site.register(Item_Purchased)
+admin.site.register(Salary_Type)
 
 
 
