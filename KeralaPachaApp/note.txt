@@ -1,0 +1,31 @@
+#1)single product (kariku) has 
+differnet manufacturing date and qty 
+ we can set as active 
+
+#2)while available bucket => 
+
+
+
+
+under  product adding time:
+name = models.CharField(max_length=250)  (dropdown from products category)
+qty =1000  
+retail_Price  = models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
+wholesale_price = models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
+validity = models.CharField(max_length=250)
+manufacture_Date= models.DateField(blank=True,null=True)
+
+whenever adding this will add to product bucket also from model...
+
+
+product bucket:
+name = models.CharField(max_length=250)  (dropdown from products category)
+available_Qty = models.IntegerField(blank=True,null=True)
+sold_Qty  = models.IntegerField(blank=True,null=True)
+
+
+#3 why need item purchase
+
+
+#Product   #Order_Details #Item_Purchased
+

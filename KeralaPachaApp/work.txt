@@ -1,0 +1,13 @@
+1)aws pushing
+2)domain name purchasing
+3)administraion page design
+4)responsive design
+5)groupwise activity adding and permission setting
+6)labours can get orders details and  set orders and update details in website
+7)delivery available locations adding in website
+8)mobile otp generate when order placing to labours
+9)report generating (product wise sale report,pnl wise report ,all sales report, highest sale based report)
+10)reduce qty from available qty when order placed and order cancelled this same qty again adding
+11)price calulation based on discount and retails 
+12)billing for customer and company copy in company copy there should be signing by customer
+13)login part
