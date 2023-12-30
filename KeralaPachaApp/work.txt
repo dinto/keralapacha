@@ -10,4 +10,9 @@
 10)reduce qty from available qty when order placed and order cancelled this same qty again adding
 11)price calulation based on discount and retails 
 12)billing for customer and company copy in company copy there should be signing by customer
-13)login part
+
+
+=======================
+done:
+=======================
+1)login part
