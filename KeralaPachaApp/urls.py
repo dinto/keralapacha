@@ -18,4 +18,4 @@ urlpatterns = [
 
 admin.site.site_header = 'KeralaPacha Administration dashboard'                   
 admin.site.index_title = 'KeralaPacha'                 
-admin.site.site_title = 'SuperNova Administration'
+admin.site.site_title = 'KeralaPacha Administration'
