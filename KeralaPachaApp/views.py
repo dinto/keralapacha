@@ -5,6 +5,8 @@ from KeralaPachaApp.decorators import unauthenticated_user,allowed_users,admin_o
 from django.contrib import messages
 from django.contrib.auth.models import User,Group
 # Create your views here.
+
+@login_required(login_url='login')
 def Home(request): 
     return render(request,'index.html',{})
 
@@ -47,3 +49,19 @@ def LoginPage(request):
 def LogoutPage(request):
     logout(request)
     return redirect('login')
+
+@login_required(login_url='login')
+def master(request): 
+    return render(request,'master.html',{})
+
+@login_required(login_url='login')
+def orders(request): 
+    return render(request,'orders.html',{})
+
+@login_required(login_url='login')
+def hr(request): 
+    return render(request,'hr.html',{})
+
+@login_required(login_url='login')
+def reports(request): 
+    return render(request,'reports.html',{})

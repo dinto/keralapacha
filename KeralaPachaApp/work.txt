@@ -1,3 +1,7 @@
+=======================
+pending work :
+=======================
+
 1)aws pushing
 2)domain name purchasing
 3)administraion page design
@@ -13,6 +17,9 @@
 
 
 =======================
-done:
+work done:
 =======================
-1)login part
+1)basic setup 
+2)login part
+3)Navbar
+4)mobile view and desktopview Navbar
