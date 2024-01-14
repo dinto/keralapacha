@@ -13,6 +13,18 @@ class Product(models.Model):
   def __str__(self):
     return  self.name + '' + str(self.manufacture_Date)
 
+class order_status(models.Model):
+  status  = models.CharField(max_length=250)
+
+  def __str__(self):
+    return  self.status
+
+class payment_status(models.Model):
+  status  = models.CharField(max_length=250)
+
+  def __str__(self):
+    return  self.status
+
 class Customer(models.Model):
   Name = models.CharField(max_length=250)
   Address = models.CharField(max_length=250)
@@ -38,19 +50,20 @@ class Company(models.Model):
     return  self.Name + '-' + self.Phone1
 
 class Order_Details(models.Model):
-  Item = models.CharField(max_length=250)
+  Product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name='Product_Details')
   Qty=models.IntegerField(blank=True,null=True)
-  Price = models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
+ # Price = models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
   Is_whole_price = models.BooleanField()
   Is_discounted = models.BooleanField()
-  Discount= models.CharField(max_length=250)
+  Discount= models.CharField(max_length=250,null=True,blank=True)
   Price_After_Discount= models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
   Total= models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
   Is_Cash_On_Delivery= models.BooleanField()
   Date= models.DateTimeField(blank=True,null=True)
   Customer_id = models.ForeignKey(Customer,on_delete=models.CASCADE,related_name='Customer_Details')
-  Order_Status= models.CharField(max_length=250)
-  Payment_Status= models.CharField(max_length=250)
+  Order_Status= models.ForeignKey(order_status,on_delete=models.CASCADE ,related_name='order_status')
+  Payment_Status= models.ForeignKey(payment_status,on_delete=models.CASCADE,related_name='payment_status')
+
   def __str__(self):
     return  self.Item + '-' + self.Order_Status
 
@@ -110,4 +123,3 @@ class Item_Purchased(models.Model):
     
   def __str__(self):
     return  self.Item + '-' + str(self.Date)
-

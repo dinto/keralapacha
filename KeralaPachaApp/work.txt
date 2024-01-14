@@ -15,8 +15,8 @@ pending work :
 11)price calulation based on discount and retails 
 12)billing for customer and company copy in company copy there should be signing by customer
 13)mobile view and desktop view 
-14)add,edit and delete  in LabourDetails,Salary_Type,LabourSalary,Vehicle Cost by individual row
-
+14)add,edit and delete  in LabourDetails,Salary_Type,LabourSalary,Vehicle Cost,company,customer,product by individual row
+15)products table should split accordingly,order taken should proper
 =======================
 work done:
 =======================
@@ -24,3 +24,4 @@ work done:
 2)login part
 3)Navbar
 4)mobile view and desktopview Navbar
+

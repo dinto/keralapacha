@@ -17,6 +17,12 @@ urlpatterns = [
     path('hr/LabourSalary/',views.LabourSalary,name='LabourSalary'),
     path('hr/VehicleCost/',views.VehicleCost,name='VehicleCost'),
     path('hr/VehicleDetail/',views.VehicleDetail,name='VehicleDetail'),
+    path('master/company/',views.company,name='company'),
+    path('master/customer/',views.customer,name='customer'),
+    path('master/products/',views.products,name='products'),
+    path('master/order_status/',views.Order_status,name='order_status'),
+    path('master/payment_status/',views.Payment_status,name='payment_status'),
+    
     
     
 ]

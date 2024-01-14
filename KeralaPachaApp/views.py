@@ -92,3 +92,28 @@ def VehicleDetail(request):
     VehicleDetail= Vehicle_Details.objects.all()
     return render(request,'VehicleDetail.html',{'VehicleDetail':VehicleDetail})
 
+
+@login_required(login_url='login')
+def company(request): 
+    CompanyDetail= Company.objects.all()
+    return render(request,'Company.html',{'CompanyDetail':CompanyDetail})
+
+@login_required(login_url='login')
+def customer(request): 
+    Customers= Customer.objects.all()
+    return render(request,'Customer.html',{'Customers':Customers})
+
+@login_required(login_url='login')
+def products(request): 
+    products= Product.objects.all()
+    return render(request,'Products.html',{'products':products})
+
+@login_required(login_url='login')
+def Order_status(request): 
+    orderstatus= order_status.objects.all()
+    return render(request,'order_status.html',{'orderstatus':orderstatus})
+
+@login_required(login_url='login')
+def Payment_status(request): 
+    paymentstatus= payment_status.objects.all()
+    return render(request,'payment_status.html',{'paymentstatus':paymentstatus})

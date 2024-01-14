@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr class="heading">
+        <th scope="col">Name</th>
+        <th scope="col">available_Qty</th>
+        <th scope="col">sold_Qty</th>
+        <th scope="col">retail_Price</th>
+        <th scope="col">wholesale_price</th>
+        <th scope="col">validity</th>
+        <th scope="col">manufacture_Date</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+      <tr style="color: hsl(208, 100%, 97%);">
+        <th  scope="row">{{product.name}}</th>
+        <th  scope="row">{{product.available_Qty}}</th>
+        <td>{{product.sold_Qty}}</td>
+        <td>{{product.retail_Price}}</td>
+        <td>{{product.wholesale_price}}</td>
+        <td>{{product.validity}}</td>
+        <td>{{product.manufacture_Date}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+
+

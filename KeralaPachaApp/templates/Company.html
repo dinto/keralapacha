@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr class="heading">
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Pincode</th>
+        <th scope="col">LandMark</th>
+        <th scope="col">Phone1</th>
+        <th scope="col">Phone2</th>
+        <th scope="col">Gst_number</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for Company in CompanyDetail %}
+      <tr style="color: aliceblue;">
+        <th  scope="row">{{Company.Name}}</th>
+        <th  scope="row">{{Company.Address}}</th>
+        <td>{{Company.Pincode}}</td>
+        <td>{{Company.LandMark}}</td>
+        <td>{{Company.Phone1}}</td>
+        <td>{{Company.Phone2}}</td>
+        <td>{{Company.Gst_number}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+
+

@@ -13,6 +13,8 @@ admin.site.register(Vehicle_Details)
 admin.site.register(Vehicle_Cost)
 admin.site.register(Item_Purchased)
 admin.site.register(Salary_Type)
+admin.site.register(order_status)
+admin.site.register(payment_status)
 
 
 
