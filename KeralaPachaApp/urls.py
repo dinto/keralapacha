@@ -12,6 +12,13 @@ urlpatterns = [
     path('orders/',views.orders,name='orders'),
     path('hr/',views.hr,name='hr'),
     path('reports/',views.reports,name='reports'),
+    path('hr/LabourDetails/',views.LabourDetails,name='LabourDetails'),
+    path('hr/SalaryType/',views.SalaryType,name='SalaryType'),
+    path('hr/LabourSalary/',views.LabourSalary,name='LabourSalary'),
+    path('hr/VehicleCost/',views.VehicleCost,name='VehicleCost'),
+    path('hr/VehicleDetail/',views.VehicleDetail,name='VehicleDetail'),
+    
+    
 ]
 
 

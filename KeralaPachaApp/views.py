@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from KeralaPachaApp.decorators import unauthenticated_user,allowed_users,admin_only
 from django.contrib import messages
 from django.contrib.auth.models import User,Group
+from KeralaPachaApp.models import *
 # Create your views here.
 
 @login_required(login_url='login')
@@ -65,3 +66,29 @@ def hr(request):
 @login_required(login_url='login')
 def reports(request): 
     return render(request,'reports.html',{})
+
+@login_required(login_url='login')
+def LabourDetails(request): 
+    Labour_Detail= Labour_Details.objects.all()
+    return render(request,'LabourDetails.html',{'Employees':Labour_Detail})
+
+@login_required(login_url='login')
+def SalaryType(request): 
+    Salary_type= Salary_Type.objects.all()
+    return render(request,'Salary_Type.html',{'Salary_Type':Salary_type})
+
+@login_required(login_url='login')
+def LabourSalary(request): 
+    salary= Labour_Salary.objects.all()
+    return render(request,'LabourSalary.html',{'Employees_salary':salary})
+
+@login_required(login_url='login')
+def VehicleCost(request): 
+    VehicleCost= Vehicle_Cost.objects.all()
+    return render(request,'VehicleCost.html',{'VehicleCost':VehicleCost})
+
+@login_required(login_url='login')
+def VehicleDetail(request): 
+    VehicleDetail= Vehicle_Details.objects.all()
+    return render(request,'VehicleDetail.html',{'VehicleDetail':VehicleDetail})
+

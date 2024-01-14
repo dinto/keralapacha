@@ -65,6 +65,9 @@ class Labour_Details(models.Model):
   Name = models.CharField(max_length=250)
   Phone = models.CharField(max_length=250)
   Salary_type = models.ForeignKey(Salary_Type,on_delete=models.CASCADE,related_name='Salary_Type')
+  Joining_Date= models.DateField(blank=True,null=True)
+  Is_Active= models.BooleanField(default=True)
+
     
   def __str__(self):
     return  self.Name 

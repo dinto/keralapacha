@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr class="heading">
+        <th scope="col">Employee Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Salary</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for salary in Employees_salary %}
+      <tr style="color: aliceblue;">
+        <th  scope="row">{{salary.Labour_Id}}</th>
+        <th  scope="row">{{salary.Date}}</th>
+        <td>{{salary.Salary}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+
+

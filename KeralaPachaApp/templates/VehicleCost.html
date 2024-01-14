@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr class="heading">
+        <th scope="col">Date</th>
+        <th scope="col">Vehicle Name</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Distance</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cost in VehicleCost %}
+      <tr style="color: aliceblue;">
+        <th  scope="row">{{cost.Date}}</th>
+        <td>{{cost.Vehicle_Id}}</td>
+        <td>{{cost.Cost}}</td>
+        <td>{{cost.Distance }}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+
+
