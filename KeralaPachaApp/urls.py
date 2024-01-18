@@ -22,6 +22,8 @@ urlpatterns = [
     path('master/products/',views.products,name='products'),
     path('master/order_status/',views.Order_status,name='order_status'),
     path('master/payment_status/',views.Payment_status,name='payment_status'),
+    path('orders/order_placing',views.OrderTake,name='OrderTake'),
+    path('orders/orders_details',views.orders_details,name='orders_details'),
     
     
     

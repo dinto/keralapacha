@@ -5,6 +5,7 @@ from KeralaPachaApp.decorators import unauthenticated_user,allowed_users,admin_o
 from django.contrib import messages
 from django.contrib.auth.models import User,Group
 from KeralaPachaApp.models import *
+from KeralaPachaApp.form import CreateOrder
 # Create your views here.
 
 @login_required(login_url='login')
@@ -117,3 +118,28 @@ def Order_status(request):
 def Payment_status(request): 
     paymentstatus= payment_status.objects.all()
     return render(request,'payment_status.html',{'paymentstatus':paymentstatus})
+
+@login_required(login_url='login')
+def OrderTake(request):
+   
+    if request.method == "POST":
+        forms = CreateOrder(request.POST, request.FILES)
+
+        if forms.is_valid():
+            forms.save()
+            return redirect("orders")
+        
+    else:
+        forms = CreateOrder()
+    
+    context = {
+        "forms": forms
+    }
+    return render(request, "order_placing.html", context)
+
+
+
+@login_required(login_url='login')
+def orders_details(request): 
+    Orders= Order_Details.objects.all()
+    return render(request,'order_List.html',{'Orders':Orders})

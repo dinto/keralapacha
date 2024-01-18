@@ -1,6 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+@media(max-width: 475px){
+    #cardrow{
+        margin-top: 100px;;
+    }
+    .col-sm-3{
+        margin-right: 150px;
+        margin-bottom: 60px;
+    }
+}
+@media(max-width: 640px){
+    #cardrow{
+        margin-top: 100px;;
+    }
+    .col-sm-3{
+        margin-right: 150px;
+        margin-bottom: 60px;
+    }
+
+}
+@media(max-width: 768px){}
+@media(max-width: 1024px){}
+@media(max-width: 1280px){}
+@media(max-width: 1536px){
+    #cardrow{
+        margin-top: 100px;;
+    }
+}
+/* big screen systems */
+@media(min-width: 1537px){
+    #cardrow{
+        margin-top: 100px;;
+    }
+}
+
+
+</style>
+<div class="container">
+    <div class="row" id="cardrow">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Order Placing</h5>
+                  <a href="order_placing" class="card-link">Next</a>
+                </div>
+            </div>       
+        </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Orders</h5>
+                  <a href="orders_details" class="card-link">Next</a>
+                </div>
+            </div>       
+        </div>
+
+</div>
 
 
 {% endblock content %}

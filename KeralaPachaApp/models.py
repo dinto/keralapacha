@@ -53,19 +53,19 @@ class Order_Details(models.Model):
   Product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name='Product_Details')
   Qty=models.IntegerField(blank=True,null=True)
  # Price = models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
-  Is_whole_price = models.BooleanField()
-  Is_discounted = models.BooleanField()
+  Is_whole_price = models.BooleanField(default=False)
+  Is_discounted = models.BooleanField( default=False)
   Discount= models.CharField(max_length=250,null=True,blank=True)
   Price_After_Discount= models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
   Total= models.DecimalField(max_digits=19,decimal_places = 2 ,null=True,blank=True)
   Is_Cash_On_Delivery= models.BooleanField()
-  Date= models.DateTimeField(blank=True,null=True)
+  Date= models.DateField(blank=True,null=True)
   Customer_id = models.ForeignKey(Customer,on_delete=models.CASCADE,related_name='Customer_Details')
   Order_Status= models.ForeignKey(order_status,on_delete=models.CASCADE ,related_name='order_status')
   Payment_Status= models.ForeignKey(payment_status,on_delete=models.CASCADE,related_name='payment_status')
 
   def __str__(self):
-    return  self.Item + '-' + self.Order_Status
+    return  str(self.Customer_id) + '-' + str(self.Date)
 
 class Salary_Type(models.Model):
   Type= models.CharField(max_length=250)

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="container-fluid">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr class="heading">
+        <th scope="col">Product</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Is_Cash_On_Delivery</th>
+        <th scope="col">Date</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Order_Status</th>
+        <th scope="col">Payment_Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for Order in Orders %}
+      <tr style="color: aliceblue;">
+        <th  scope="row">{{Order.Product}}</th>
+        <td>{{Order.Qty}}</td>
+        <td>{{Order.Is_Cash_On_Delivery}}</td>
+        <td>{{Order.Date }}</td>
+        <td>{{Order.Customer_id}}</td>
+        <td>{{Order.Order_Status}}</td>
+        <td>{{Order.Payment_Status}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+
+
