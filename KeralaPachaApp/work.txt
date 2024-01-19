@@ -17,6 +17,13 @@ pending work :
 13)mobile view and desktop view 
 14)add,edit and delete  in LabourDetails,Salary_Type,LabourSalary,Vehicle Cost,company,customer,product by individual row
 15)products table should split accordingly,order taken should proper
+
+=======================
+e-commence
+=======================
+1)delivery boy logins in customer product delivery
+2)available time and location should be mensioned
+3)agency functions should be there
 =======================
 work done:
 =======================
